@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Платежное поручение № 5241234 от 23.09.2015</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- todo: fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__search">
+            <input class="form-input header__search__input" type="search" name="search" id="search" placeholder="Поиск">
+            <button class="button button-icon header__search__button" type="button"><span class="icon icon-search"></span></button>
+        </div>
+        <ul class="header__menu header__menu-main list-unstyled">
+            <li class="header__menu-main__item"><a class="header__menu-main__link active" href="#">Деньги</a></li>
+            <li class="header__menu-main__item"><a class="header__menu-main__link" href="#">Контакты</a></li>
+            <li class="header__menu-main__item"><a class="header__menu-main__link has-child" href="#">Услуги</a>
+                <ul class="menu__dropdown header__menu-main__dropdown">
+                    <li><a href="#">Услуги 1</a></li>
+                    <li><a href="#">Услуги 2</a></li>
+                    <li><a href="#">Услуги 3</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="header__menu header__menu-new">
+            <button class="button button-icon button__add-new" type="button">Новый платеж</button>
+        </div>
+            
+        <div class="header__profile">
+            <div class="header__notification">
+                <button class="header__notification__button button button-icon">
+                    <span class="icon icon-bell"></span>
+                    <span class="badge badge-danger header__notification__button__badge">2</span>
+                </button>
+            </div>
+            <div class="profile__menu">
+                <div class="profile__type icon icon-house"></div>
+                <div class="profile__title">ООО «РОДНЫЕ ПРОСТОРЫ»</div>
+                <span class="icon icon-arrow icon-arrow-down"></span>
+            </div>
+            <!-- <div class="dropdown"></div> -->
+        </div>
+
+    </header>
+    <div class="main">
+
+        <div class="sidebar-panel">
+            <header class="panel-header">
+                <button class="panel-header__button  button button-icon  icon icon-close" type="button" aria-label="Закрыть"></button>
+                <div class="panel-title">
+                    Платежное поручение № 5241234 от 23.09.2015
+                </div>
+            </header>
+            <div class="panel-body">
+                <div class="panel-content">
+                    <div class="base-info">
+                        <div class="base-info__price">– 23 500,00 ₽</div>
+                        <div class="base-info__account"><span class="base-info__account__label">со счета:</span> Расчетный счет (***012345)</div>
+                        <div class="base-info__transaction-date">ИСПОЛНЕН, 21 июня 15:33</div>
+                    </div>
+                    <div class="panel__card">
+                        <div class="panel__card-body">
+                            <div class="panel__card-info">
+                                <div class="panel__card-title">ООО «Родные просторы»</div>
+                                <dl class="panel__card-details">
+                                    <dt>ИНН:</dt>
+                                    <dd>22341497819132</dd>                                
+                                    <dt>Банк:</dt>
+                                    <dd>ОАО Сбербанк</dd>
+                                    <dt>БИК:</dt>
+                                    <dd>2352362365</dd>
+                                    <dt>Счет:</dt> 
+                                    <dd>40802810970010000395</dd>
+                                </dl>
+                            </div>
+                            <div class="panel__card-scores">
+                                <ul class="card-scores__list Xlist-unstyled">
+                                    <li class="card-scores__item">
+                                        <div class="card-scores__item-text"><a class="card-scores__link" href="#">Высокая финансовая устойчивость</a></div>
+                                        <div class="card-scores__infographics-item"></div>
+                                    </li>
+                                    <li class="card-scores__item">
+                                        <div class="card-scores__item-text"><a class="card-scores__link" href="#">Высокая благонадежность</a></div>
+                                        <div class="card-scores__infographics-item"></div>
+                                    </li>
+                                    <li class="card-scores__item">
+                                        <div class="card-scores__item-text"><a class="card-scores__link" href="#">Кредитоспособность 44,5 млрд ₽</a></div>
+                                        <div class="card-scores__infographics-item"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel__card-footer">
+                            Оплата за партию ромашек и одуванчиков по договору 14023-023 от 14.05.2015 г. Сумма 11430-00. В том числе НДС 18% - 1450,00&nbsp;₽
+                        </div>
+                    </div>
+                    <div class="panel-content__footnote">
+                        <p>Комиссия банка: 70 р.</p>
+                        <p>Размер комиссии рассчитан автоматически согласно тарифу вашей компании и является ознакомительным. Точный размер комиссии определяется после передачи платежного документа на обработку в банк.</p>
+                    </div>
+                </div>
+            </div>
+            <footer class="panel-footer">
+                <ul class="panel-footer__menu list-unstyled">
+                    <li><a class="button button-link panel-footer__menu__button" href="#retry"><span class="icon icon-repeat  panel-footer__menu__icon"></span> Повторить</a></li>
+                    <li><a class="button button-link panel-footer__menu__button" href="#favorites"><span class="icon icon-favorite  panel-footer__menu__icon"></span>В избранное</a></li>
+                    <li><a class="button button-link panel-footer__menu__button" href="#chat"><span class="icon icon-chat  panel-footer__menu__icon"></span> Спросить</a></li>
+                    <li><a class="button button-link panel-footer__menu__button" href="#do"><span class="icon icon-dots  panel-footer__menu__icon"></span> Действия</a></li>
+                </ul>
+            </footer>
+        </div>
+
+    </div>
+</body>
+</html>
