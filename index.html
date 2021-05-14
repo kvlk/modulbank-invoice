@@ -21,7 +21,9 @@
         <ul class="header__menu header__menu-main list-unstyled">
             <li class="header__menu-main__item"><a class="header__menu-main__link active" href="#">Деньги</a></li>
             <li class="header__menu-main__item"><a class="header__menu-main__link" href="#">Контакты</a></li>
-            <li class="header__menu-main__item"><a class="header__menu-main__link has-child" href="#">Услуги</a>
+            <li class="header__menu-main__item">
+                <a class="header__menu-main__link has-child" href="#">Услуги</a>
+                <button class="button button-icon header__menu__dropdown__button" type="button"><span class="icon icon-arrow icon-arrow-down header__menu__dropdown__icon"></span></button>
                 <ul class="menu__dropdown header__menu-main__dropdown">
                     <li><a href="#">Услуги 1</a></li>
                     <li><a href="#">Услуги 2</a></li>
@@ -43,18 +45,18 @@
             </div>
             <div class="profile__menu">
                 <div class="profile__type icon icon-house"></div>
-                <div class="profile__title">ООО «РОДНЫЕ ПРОСТОРЫ»</div>
+                <a class="profile__title" href="#">ООО «РОДНЫЕ ПРОСТОРЫ»</a>
                 <span class="icon icon-arrow icon-arrow-down"></span>
+                <div class="menu__dropdown header__profile__dropdown" style="display: none;"></div>
             </div>
-            <!-- <div class="dropdown"></div> -->
         </div>
 
     </header>
     <div class="main">
 
-        <div class="sidebar-panel">
+        <div class="sidebar-panel active" id="sidebar-panel">
             <header class="panel-header">
-                <button class="panel-header__button  button button-icon  icon icon-close" type="button" aria-label="Закрыть"></button>
+                <button id="panel-close" class="panel-header__button  button button-icon  icon icon-close" type="button" aria-label="Закрыть"></button>
                 <div class="panel-title">
                     Платежное поручение № 5241234 от 23.09.2015
                 </div>
@@ -119,5 +121,16 @@
         </div>
 
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            //let closePanel = function() {
+                let closePanelButton = document.querySelector("#panel-close");
+                closePanelButton.addEventListener("click", function() {
+                    document.querySelector("#sidebar-panel").classList.remove("active");
+                }, false);
+            //};
+        }, false);
+    </script>
 </body>
 </html>
