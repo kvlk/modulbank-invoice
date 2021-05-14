@@ -1,17 +1,3 @@
-/* todo: scrollbar */
-/* todo: IE 11 flexbox */
-/* todo: modules */
-/* todo: box-sizing */
-/* todo: names */
-/* todo: Xclasses */
-/* todo: scss */
-/* todo: npm */
-
-/* html,
-body {
-    margin: 0;
-    padding: 0;
-} */
 * {
     box-sizing: border-box;
 }
@@ -37,10 +23,6 @@ a {
     color: inherit;
     text-decoration: none;
 }
-/* img,
-video {
-    vertical-align: middle;
-} */
 
 /* #region Reusable elements and helpers */
 
@@ -198,7 +180,6 @@ video {
 }
 
 .header__search {
-    box-sizing: border-box;
     flex-shrink: 0;
     flex-basis: 16%;
     display: flex;
@@ -502,7 +483,6 @@ video {
     margin-right: 15px;
 }
 .card-scores__infographics-item {
-    /* box-sizing: border-box; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -540,7 +520,6 @@ video {
 
 /* Panel footer */
 .panel-footer {
-	box-sizing: border-box;
 	height: 60px;
     min-height: 60px;
 	padding: 15px;

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- todo: fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
@@ -84,7 +83,7 @@
                                 </dl>
                             </div>
                             <div class="panel__card-scores">
-                                <ul class="card-scores__list Xlist-unstyled">
+                                <ul class="card-scores__list">
                                     <li class="card-scores__item">
                                         <div class="card-scores__item-text"><a class="card-scores__link" href="#">Высокая финансовая устойчивость</a></div>
                                         <div class="card-scores__infographics-item"></div>
@@ -124,12 +123,10 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            //let closePanel = function() {
-                let closePanelButton = document.querySelector("#panel-close");
-                closePanelButton.addEventListener("click", function() {
-                    document.querySelector("#sidebar-panel").classList.remove("active");
-                }, false);
-            //};
+            let closePanelButton = document.querySelector("#panel-close");
+            closePanelButton.addEventListener("click", function() {
+                document.querySelector("#sidebar-panel").classList.remove("active");
+            }, false);
         }, false);
     </script>
 </body>
