@@ -77,9 +77,7 @@ a {
     width: 17px;
     height: 17px;
     border-radius: 10px;
-
     border: 2px solid #37AEC1;
-
     font-family: "Fira Sans", "Roboto", sans-serif;
     font-weight: 500;
     font-size: 10px;
@@ -495,6 +493,8 @@ a {
     color: #fff;
 }
 .card-scores__infographics-item_progress {
+    font-weight: 500;
+    font-size: 14px;
     border-color: #81c179;
     background: #fff;
     color: #000;
@@ -503,12 +503,13 @@ a {
 .card-scores__link {
     font-size: 10.66px;
     color: #2873B9;
-    border-image: repeating-linear-gradient(to right, #2873B9, #2873B9 1px, transparent 1px, transparent 2px) 5 / 1 1 1px 1 / 0 0 2px 0 repeat;
-    /* border-image-slice: 5; */
-    /* border-image-width: 1 1 1px 1; */
-    /* border-image-outset: 0 0 2px 0; */
-    /* border-image-repeat: repeat; */
+    border-bottom: 1px dotted;
+    /* border-image: repeating-linear-gradient(to right, #2873B9, #2873B9 1px, transparent 1px, transparent 2px) 5 / 1 1 1px 1 / 0 0 2px 0 repeat; */
     text-decoration: none;
+}
+.card-scores__link:hover,
+.card-scores__link:focus {
+    color: #37AEC1;
 }
 
 .panel-content__footnote {
@@ -537,6 +538,11 @@ a {
 }
 .panel-footer__menu__button {
     display: inline-flex;
+    transition: all 0.3s;
+}
+.panel-footer__menu__button:hover,
+.panel-footer__menu__button:focus {
+    opacity: 0.8;
 }
 .panel-footer__menu__icon {
     margin-right: 10px;
@@ -548,5 +554,3 @@ a {
 }
 
 /* #endregion */
-
-
