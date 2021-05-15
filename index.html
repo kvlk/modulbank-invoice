@@ -6,21 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Платежное поручение № 5241234 от 23.09.2015</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preload" href="fonts/Roboto-Light.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/Roboto-Medium.woff2" as="font" type="font/woff2">
+    <link rel="stylesheet" href="css/fonts.css">
 </head>
 <body>
     <header class="header">
         <div class="header__search">
             <input class="form-input header__search__input" type="search" name="search" id="search" placeholder="Поиск">
-            <button class="button button-icon header__search__button" type="button"><span class="icon icon-search"></span></button>
+            <button class="button button-icon header__search__button" type="button" aria-label="⌕"><span class="icon icon-search"></span></button>
         </div>
         <ul class="header__menu header__menu-main list-unstyled">
             <li class="header__menu-main__item"><a class="header__menu-main__link active" href="#">Деньги</a></li>
             <li class="header__menu-main__item"><a class="header__menu-main__link" href="#">Контакты</a></li>
             <li class="header__menu-main__item">
-                <a class="header__menu-main__link has-child" href="#">Услуги</a>
-                <button class="button button-icon header__menu__dropdown__button" type="button"><span class="icon icon-arrow icon-arrow-down header__menu__dropdown__icon"></span></button>
+                <span style="white-space: nowrap;">
+                    <a class="header__menu-main__link has-child" href="#">Услуги</a>
+                    <button class="button button-icon header__menu__dropdown__button" type="button"><span class="icon icon-arrow icon-arrow-down header__menu__dropdown__icon"></span></button>
+                </span>
                 <ul class="menu__dropdown header__menu-main__dropdown">
                     <li><a href="#">Услуги 1</a></li>
                     <li><a href="#">Услуги 2</a></li>
@@ -30,12 +36,15 @@
         </ul>
 
         <div class="header__menu header__menu-new">
-            <button class="button button-icon button__add-new" type="button">Новый платеж</button>
+            <button class="button button-icon icon icon-plus button__add-new" type="button">Новый платеж</button>
         </div>
             
         <div class="header__profile">
             <div class="header__notification">
                 <button class="header__notification__button button button-icon">
+                    <!-- <svg class="icon icon-bell" viewBox="0 0 15 19" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
+                        <use xlink:href="#icon-bell"></use>
+                    </svg> -->
                     <span class="icon icon-bell"></span>
                     <span class="badge badge-danger header__notification__button__badge">2</span>
                 </button>
@@ -84,9 +93,6 @@
                                 <ul class="card-scores__list">
                                     <li class="card-scores__item">
                                         <div class="card-scores__item-text"><a class="card-scores__link" href="#">Высокая финансовая устойчивость</a></div>
-
-        
-
                                         <div class="card-scores__infographics-item card-scores__infographics-item_progress">88</div>
                                     </li>
                                     <li class="card-scores__item">
@@ -110,12 +116,25 @@
                     </div>
                 </div>
             </div>
+            
             <footer class="panel-footer">
                 <ul class="panel-footer__menu list-unstyled">
-                    <li><a class="button button-link panel-footer__menu__button" href="#retry"><span class="icon icon-repeat  panel-footer__menu__icon"></span> Повторить</a></li>
-                    <li><a class="button button-link panel-footer__menu__button" href="#favorites"><span class="icon icon-favorite  panel-footer__menu__icon"></span>В избранное</a></li>
-                    <li><a class="button button-link panel-footer__menu__button" href="#chat"><span class="icon icon-chat  panel-footer__menu__icon"></span> Спросить</a></li>
-                    <li><a class="button button-link panel-footer__menu__button" href="#do"><span class="icon icon-dots  panel-footer__menu__icon"></span> Действия</a></li>
+                    <li><a class="button button-link panel-footer__menu__button" href="#retry">                        
+                        <!-- <svg class="icon icon-repeat  panel-footer__menu__icon"><use xlink:href="#icon-cycle"></use></svg> -->
+                        <span class="icon icon-repeat  panel-footer__menu__icon"></span>
+                        Повторить</a></li>
+                    <li><a class="button button-link panel-footer__menu__button" href="#favorites">
+                        <!-- <svg class="icon icon-favorite  panel-footer__menu__icon"><use xlink:href="#icon-star"></use></svg> -->
+                        <span class="icon icon-favorite  panel-footer__menu__icon"></span>
+                        В избранное</a></li>
+                    <li><a class="button button-link panel-footer__menu__button" href="#chat">
+                        <!-- <svg class="icon icon-chat  panel-footer__menu__icon"><use xlink:href="#icon-chat"></use></svg> -->
+                        <span class="icon icon-chat  panel-footer__menu__icon"></span>
+                        Спросить</a></li>
+                    <li><a class="button button-link panel-footer__menu__button" href="#do">
+                        <!-- <svg class="icon icon-dots  panel-footer__menu__icon"><use xlink:href="#icon-hellip"></use></svg> -->
+                        <span class="icon icon-dots  panel-footer__menu__icon"></span> 
+                        Действия</a></li>
                 </ul>
             </footer>
         </div>
