@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Платежное поручение № 5241234 от 23.09.2015</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="css/style.css">    
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="preload" href="fonts/Roboto-Light.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -23,9 +22,9 @@
             <li class="header__menu-main__item"><a class="header__menu-main__link active" href="#">Деньги</a></li>
             <li class="header__menu-main__item"><a class="header__menu-main__link" href="#">Контакты</a></li>
             <li class="header__menu-main__item">
-                <span style="white-space: nowrap;">
+                <span class="menu__dropdown-link">
                     <a class="header__menu-main__link has-child" href="#">Услуги</a>
-                    <button class="button button-icon header__menu__dropdown__button" type="button"><span class="icon icon-arrow icon-arrow-down header__menu__dropdown__icon"></span></button>
+                    <button class="button button-icon header__menu__dropdown__button" type="button"><span class="icon icon-arrow icon-arrow-down header__menu__dropdown__icon">&#9207;</span></button>
                 </span>
                 <ul class="menu__dropdown header__menu-main__dropdown">
                     <li><a href="#">Услуги 1</a></li>
@@ -46,11 +45,12 @@
                     <span class="badge badge-danger header__notification__button__badge">2</span>
                 </button>
             </div>
-            <div class="profile__menu">
-                <div class="profile__type icon icon-house"></div>
-                <a class="profile__title" href="#">ООО «РОДНЫЕ ПРОСТОРЫ»</a>
-                <span class="icon icon-arrow icon-arrow-down profile__menu__icon"></span>
-                <div class="menu__dropdown header__profile__dropdown" style="display: none;"></div>
+            <div class="header__profile__menu">
+                <div class="header__profile__type icon icon-house"></div>
+                <span class="header__profile__title js-sidebar-toggle">
+                    <a href="#sidebar-panel">ООО «РОДНЫЕ ПРОСТОРЫ»</a>
+                    <span class="icon icon-arrow icon-arrow-down header__profile__menu__icon"></span>
+                </span>
             </div>
         </div>
 
