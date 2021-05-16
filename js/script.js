@@ -22,17 +22,25 @@ document.addEventListener("DOMContentLoaded", function(e) {
     let sidebarPanel = document.querySelector("#sidebar-panel");
     let openPanelButton = document.querySelectorAll(".js-sidebar-toggle");
     let closePanelButton = document.querySelector("#panel-close");
+    let headerProfileMenuArrow = document.querySelector(".header__profile__menu__icon");
 
     for (let j = 0; j < openPanelButton.length; j++) {
         openPanelButton[j].addEventListener("click", function(e) {
             e.preventDefault();
-            // this.parentNode.querySelector(".header__profile__menu__icon").classList.toggle("icon-arrow-up");
+            headerProfileMenuArrow.classList.toggle("icon-arrow-down");
+            headerProfileMenuArrow.classList.toggle("icon-arrow-right");
             sidebarPanel.classList.toggle("active");
         }, false);
     }
 
     closePanelButton.addEventListener("click", function() {
         sidebarPanel.classList.remove("active");
+        closePanelButton.classList.add("active");
+        headerProfileMenuArrow.classList.toggle("icon-arrow-down");
+        headerProfileMenuArrow.classList.toggle("icon-arrow-right");
+        setTimeout(function() {
+            closePanelButton.classList.remove("active");
+        }, 600);
     }, false);
 
     let searchInput = document.querySelector("#search");

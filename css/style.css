@@ -1,12 +1,12 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     min-width: 925px;
     font: 400 16px/1.33 "Roboto", sans-serif;
     background: #EDEFF1;
     color: #2C2F32;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 ul,
@@ -39,11 +39,23 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+
 .button-icon {
     overflow: hidden;
     background: no-repeat 50% 50%;
     color: transparent;
 }
+.button-icon:active {
+    transform: scale(1.05, 1.05);
+}
+.button-icon.has-child:active {
+    transform: none;
+}
+.button-icon.has-child:active .icon,
+.button-link:active .icon {
+    transform: scale(1.05, 1.05);
+}
+
 .button-link {
     padding-left: 0;
     padding-right: 0;
@@ -89,12 +101,6 @@ a {
     display: inline-block;
     background: no-repeat 50% 50%;
 }
-.icon-svg {
-    display: none;
-}
-.icon-svg:target {
-    display: inline;
-}
 
 .icon-bell {
     width: 15px;
@@ -126,7 +132,11 @@ a {
 }
 .icon-arrow-up {
     background-image: url("../images/sprite.svg#icon-arrow-down");
-    transform: rotate(-180deg);
+    transform: rotate(180deg);
+}
+.icon-arrow-right {
+    background-image: url("../images/sprite.svg#icon-arrow-down");
+    transform: rotate(270deg);
 }
 .icon-qr {
     width: 24px;
@@ -319,6 +329,9 @@ a {
     background-size: 16px 16px;
     transform: rotate(45deg);
 }
+.button__add-new:active {
+    transform: rotate(45deg) scale(1.05, 1.05);
+}
 
 /* Profile menu */
 .header__profile {
@@ -364,6 +377,7 @@ a {
 }
 .header__notification__button__badge {
 	margin: -13px 0 0 -7px;
+    opacity: 0.999; /* prevent stacking context change during underlaying elements transformation */
 }
 /* #endregion */
 
@@ -405,6 +419,10 @@ a {
     height: 20px;
     border: 2px solid transparent;
     margin: 0 25px 0 0;
+    transition: all 0.3s;
+}
+.panel-header__button.active {
+    transform: rotate(180deg);
 }
 
 .panel-title {
@@ -477,7 +495,7 @@ a {
 	border-radius: 0 2px 0 0;
     background: #fff no-repeat;
     background-image: url("../images/card-corner.png"),
-                      url("../images/corner.svg");
+                      url("../images/card-corner.svg");
     background-position: -2px -9px,
                          100% -1px;
 }
@@ -649,7 +667,7 @@ a {
 }
 .panel-footer__menu__button:hover,
 .panel-footer__menu__button:focus {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 .panel-footer__menu__icon {
     margin-right: 10px;

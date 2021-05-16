@@ -16,14 +16,14 @@
     <header class="header">
         <div class="header__search">
             <input class="form-input header__search__input" type="search" name="search" id="search" placeholder="Поиск">
-            <button class="button button-icon header__search__button" type="button" aria-label="⌕"><span class="icon icon-search"></span></button>
+            <button class="button button-icon header__search__button has-child" type="button" aria-label="⌕"><span class="icon icon-search"></span></button>
         </div>
         <ul class="header__menu header__menu-main list-unstyled">
             <li class="header__menu-main__item"><a class="header__menu-main__link active" href="#">Деньги</a></li>
             <li class="header__menu-main__item"><a class="header__menu-main__link" href="#">Контакты</a></li>
             <li class="header__menu-main__item">
                 <span class="menu__dropdown-link">
-                    <a class="header__menu-main__link has-child" href="#">Услуги</a>
+                    <a class="header__menu-main__link" href="#">Услуги</a>
                     <button class="button button-icon header__menu__dropdown__button" type="button"><span class="icon icon-arrow icon-arrow-down header__menu__dropdown__icon">&#9207;</span></button>
                 </span>
                 <ul class="menu__dropdown header__menu-main__dropdown">
@@ -40,7 +40,7 @@
             
         <div class="header__profile">
             <div class="header__notification">
-                <button class="header__notification__button button button-icon">
+                <button class="header__notification__button button button-icon has-child">
                     <span class="icon icon-bell"></span>
                     <span class="badge badge-danger header__notification__button__badge">2</span>
                 </button>
