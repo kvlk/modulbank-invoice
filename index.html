@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     
-    <link rel="preload" href="fonts/Roboto-Light.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2">
-    <link rel="preload" href="fonts/Roboto-Medium.woff2" as="font" type="font/woff2">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="preload" href="fonts/Roboto-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
     <header class="header">
@@ -42,9 +42,6 @@
         <div class="header__profile">
             <div class="header__notification">
                 <button class="header__notification__button button button-icon">
-                    <!-- <svg class="icon icon-bell" viewBox="0 0 15 19" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMinYMin">
-                        <use xlink:href="#icon-bell"></use>
-                    </svg> -->
                     <span class="icon icon-bell"></span>
                     <span class="badge badge-danger header__notification__button__badge">2</span>
                 </button>
@@ -52,7 +49,7 @@
             <div class="profile__menu">
                 <div class="profile__type icon icon-house"></div>
                 <a class="profile__title" href="#">ООО «РОДНЫЕ ПРОСТОРЫ»</a>
-                <span class="icon icon-arrow icon-arrow-down"></span>
+                <span class="icon icon-arrow icon-arrow-down profile__menu__icon"></span>
                 <div class="menu__dropdown header__profile__dropdown" style="display: none;"></div>
             </div>
         </div>
@@ -89,19 +86,36 @@
                                     <dd>40802810970010000395</dd>
                                 </dl>
                             </div>
+                            
                             <div class="panel__card-scores">
                                 <ul class="card-scores__list">
                                     <li class="card-scores__item">
-                                        <div class="card-scores__item-text"><a class="card-scores__link" href="#">Высокая финансовая устойчивость</a></div>
-                                        <div class="card-scores__infographics-item card-scores__infographics-item_progress">88</div>
+                                        <div class="card-scores__item-text"><a class="card-scores__link" href="#">Высокая финансовая устойчивость</a></div>       
+                                        <svg class="card-scores__infographics-item card-scores__infographics-item_progress progress-ring">
+                                            <circle class="progress-ring__circle-underlay" r="21" cx="22" cy="22" />
+                                            <circle class="progress-ring__circle" r="21" cx="22" cy="22"
+                                                stroke-dasharray="calc(2 * 3.1415 * 21px)"
+                                                stroke-dashoffset="calc((2 * 3.1415 * 21px) - (88 / 100) * (2 * 3.1415 * 21px))"
+                                                transform="rotate(-90 22 22)" />
+                                            <text class="progress-ring__text" x="50%" y="50%" dy=".33em">88</text>
+                                        </svg>
                                     </li>
                                     <li class="card-scores__item">
                                         <div class="card-scores__item-text"><a class="card-scores__link" href="#">Высокая благонадежность</a></div>
-                                        <div class="card-scores__infographics-item card-scores__infographics-item_progress">100</div>
+                                        <svg class="card-scores__infographics-item card-scores__infographics-item_progress progress-ring">
+                                            <circle class="progress-ring__circle-underlay" r="21" cx="22" cy="22" />
+                                            <circle class="progress-ring__circle" r="21" cx="22" cy="22"
+                                                stroke-dasharray="calc(2 * 3.1415 * 21px)"
+                                                stroke-dashoffset="calc((2 * 3.1415 * 21px) - (100 / 100) * (2 * 3.1415 * 21px))"
+                                                transform="rotate(-90 22 22)" />
+                                            <text class="progress-ring__text" x="50%" y="50%" dy=".33em">100</text>
+                                        </svg>
                                     </li>
                                     <li class="card-scores__item">
                                         <div class="card-scores__item-text"><a class="card-scores__link" href="#">Кредитоспособность 44,5 млрд ₽</a></div>
-                                        <div class="card-scores__infographics-item"></div>
+                                        <div class="card-scores__infographics-item">
+                                            <span class="card-scores__infographics-number">1</span> класс
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -120,19 +134,15 @@
             <footer class="panel-footer">
                 <ul class="panel-footer__menu list-unstyled">
                     <li><a class="button button-link panel-footer__menu__button" href="#retry">                        
-                        <!-- <svg class="icon icon-repeat  panel-footer__menu__icon"><use xlink:href="#icon-cycle"></use></svg> -->
                         <span class="icon icon-repeat  panel-footer__menu__icon"></span>
                         Повторить</a></li>
                     <li><a class="button button-link panel-footer__menu__button" href="#favorites">
-                        <!-- <svg class="icon icon-favorite  panel-footer__menu__icon"><use xlink:href="#icon-star"></use></svg> -->
                         <span class="icon icon-favorite  panel-footer__menu__icon"></span>
                         В избранное</a></li>
                     <li><a class="button button-link panel-footer__menu__button" href="#chat">
-                        <!-- <svg class="icon icon-chat  panel-footer__menu__icon"><use xlink:href="#icon-chat"></use></svg> -->
                         <span class="icon icon-chat  panel-footer__menu__icon"></span>
                         Спросить</a></li>
                     <li><a class="button button-link panel-footer__menu__button" href="#do">
-                        <!-- <svg class="icon icon-dots  panel-footer__menu__icon"><use xlink:href="#icon-hellip"></use></svg> -->
                         <span class="icon icon-dots  panel-footer__menu__icon"></span> 
                         Действия</a></li>
                 </ul>
@@ -141,13 +151,6 @@
 
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let closePanelButton = document.querySelector("#panel-close");
-            closePanelButton.addEventListener("click", function() {
-                document.querySelector("#sidebar-panel").classList.remove("active");
-            }, false);
-        }, false);
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
